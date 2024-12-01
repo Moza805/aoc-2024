@@ -6,10 +6,11 @@ const leftList = [];
 const rightList = [];
 
 for (let line of lines) {
-  var split = line.split(/[ ]+/);
+  var split = line.split(/\s+/);
   leftList.push(+split[0]);
   rightList.push(+split[1]);
 }
+
 const sortedLeftList = [...leftList].sort();
 const sortedRightList = [...rightList].sort();
 
@@ -23,7 +24,7 @@ const part1 = () => {
 };
 
 const part2 = () => {
-  let sum = 0;
+  let similarityScore = 0;
 
   for (let line of leftList) {
     const firstIndex = sortedRightList.indexOf(line);
@@ -35,11 +36,11 @@ const part2 = () => {
     const lastIndex = sortedRightList.lastIndexOf(line);
 
     const diff = lastIndex - firstIndex + 1;
-    sum += line * diff;
+    similarityScore += line * diff;
   }
 
-  return sum;
+  return similarityScore;
 };
 
-// console.log(part1());
+console.log(part1());
 console.log(part2());
