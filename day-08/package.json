@@ -1,0 +1,30 @@
+{
+  "name": "day-7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Moza805/aoc-2024.git"
+  },
+  "keywords": [
+    "adventofcode",
+    "aoc",
+    "advent-of-code"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Moza805/aoc-2024/issues"
+  },
+  "homepage": "https://github.com/Moza805/aoc-2024#readme",
+  "type": "module",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "@types/node": "^22.10.1"
+  }
+}
