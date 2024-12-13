@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2023"],
+    "target": "ES2015",
+    "module": "nodenext",
+    "outDir": "out",
+    "sourceMap": true
+  }
+}
