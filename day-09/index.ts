@@ -17,7 +17,7 @@ const expandDiskMap = (diskMap: string): (string | undefined)[] =>
       return newDiskContent;
     }, []);
 
-const defrag = (disk: (string | undefined)[]) => {
+const blockLevelDefrag = (disk: (string | undefined)[]) => {
   const dataBlockCount = disk.filter((x) => x !== undefined).length;
   let defragged = [...disk];
 
@@ -33,6 +33,10 @@ const defrag = (disk: (string | undefined)[]) => {
   return defragged;
 };
 
+const fileLevelDefrag = (disk:(string | undefined)[]) => {
+  
+}
+
 const calculateChecksum = (disk: (string | undefined)[]) =>
   disk
     .filter((x) => x !== undefined)
@@ -41,7 +45,7 @@ const calculateChecksum = (disk: (string | undefined)[]) =>
 const part1 = (data) => {
   const diskContent = expandDiskMap(data);
 
-  const defragged = defrag(diskContent);
+  const defragged = blockLevelDefrag(diskContent);
 
   const checksum = calculateChecksum(defragged);
 
